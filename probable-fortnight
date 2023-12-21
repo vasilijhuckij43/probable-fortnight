@@ -1,0 +1,10 @@
+case .longTap(let point):
+            newState = onLongTap(point, in: newState)
+            
+        case .scale(let gestureState):
+            newState = onSale(gestureState, in: newState)
+            
+        case .removeShape(let id):
+            newCollage.shapes.removeAll(where: { $0.id == id })
+            
+        case .removeText(let id):
